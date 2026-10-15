@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  DESBORD IT · Help Desk IT multisede — VERSIÓN DEMO (GitHub Pages).
+  Grand Sirenis San Andrés & San Luis Village.
+
+  Todo el sistema corre en el navegador: interfaz, motor de tickets, deduplicación,
+  detección de propiedad, clasificación, SLA, alertas, reportes y permisos por rol.
+  Arranca vacío (sin tickets) y guarda los datos en localStorage de este navegador.
+  Los buzones de correo se SIMULAN y no se envía ningún correo real.
+  Para la versión conectada a Gmail, Microsoft 365 y Google Sheets use el proyecto Apps Script.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DESBORD IT · Help Desk (demo)</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230B2545%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2214%22 fill=%22white%22 text-anchor=%22middle%22%3EIT%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">IT</div>
+        <div>
+          <div class="brand-title">DESBORD IT</div>
+          <div class="brand-sub">Help Desk multisede</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot" id="sidebarFoot"></div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="logos" id="logos"></div>
+        <div class="topbar-right">
+          <label class="prop-select">
+            <span class="sr-only">Propiedad</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <select id="propSelect" aria-label="Filtrar por propiedad"></select>
+          </label>
+          <div class="user-chip" id="userChip"></div>
+        </div>
+      </header>
+      <div id="banner"></div>
+      <main class="view" id="view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <nav class="bottomnav" id="bottomnav" aria-label="Navegación móvil"></nav>
+  <div id="modalRoot"></div>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="motor.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
