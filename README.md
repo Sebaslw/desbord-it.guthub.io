@@ -1,14 +1,14 @@
 # DESBORD IT · Help Desk (demo)
 
-Help Desk IT multisede para Grand Sirenis San Andrés y San Luis Village. Todo corre en el navegador y los datos se guardan en `localStorage`. Los buzones de correo se simulan y no se envía ningún correo real.
+Help Desk IT multisede. Todo corre en el navegador y los datos se guardan en `localStorage`. Los buzones de correo se simulan y no se envía ningún correo real.
 
 ## Estructura
 
 ```
 index.html        Página principal
-css/styles.css    Estilos
-js/motor.js       Motor de tickets (deduplicación, propiedad, clasificación, SLA, alertas, reportes, permisos)
-js/app.js         Interfaz (dashboard, mesa de ayuda, reportes, conectores)
+styles.css    Estilos
+motor.js       Motor de tickets (deduplicación, propiedad, clasificación, SLA, alertas, reportes, permisos)
+app.js         Interfaz (dashboard, mesa de ayuda, reportes, conectores)
 .nojekyll         Evita que GitHub Pages procese el sitio con Jekyll
 ```
 
