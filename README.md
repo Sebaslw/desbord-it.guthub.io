@@ -20,3 +20,4 @@ js/app.js         Interfaz (dashboard, mesa de ayuda, reportes, conectores)
 2. En el repositorio: **Settings → Pages → Build and deployment → Source: Deploy from a branch**.
 3. Elija la rama `main` y la carpeta `/ (root)`, y guarde.
 4. En uno o dos minutos el sitio queda en `https://<usuario>.github.io/<repositorio>/`.
+<img width="1873" height="911" alt="Captura de pantalla 2026-10-15 175954" src="https://github.com/user-attachments/assets/da26d54d-9294-463e-8ce4-95b48f0bdc25" />
